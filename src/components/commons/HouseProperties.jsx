@@ -4,8 +4,8 @@ import { Card, CardMedia } from '@mui/material';
 
 const useClasses = makeStyles({
     root: {
-        width: '22rem',
-        height: 'auto',
+        maxWidth: '15rem',
+        height: '22rem',
     },
 
     imageCard: {
