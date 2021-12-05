@@ -4,7 +4,7 @@ import { Commons } from "./components/commons/Commons"
 function App() {
   return (
     <div>
-      <Commons.Header />
+      {/* <Commons.Header /> */}
       <Landing />
     </div>
   );

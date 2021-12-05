@@ -1,7 +1,7 @@
 import Banner from "./Banner";
 import HouseProperties from "./HouseProperties";
 import SearchBar from "./SearchBar";
-import Header from '../commons/Header'
+import Header from './ButtonAppBar'
 
 export const Commons = {
     Banner,
