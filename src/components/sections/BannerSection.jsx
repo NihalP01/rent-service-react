@@ -5,6 +5,7 @@ import { Box, Typography, Grid, Button } from '@mui/material';
 import { apis } from '../../network/apis';
 import { useState, useEffect } from 'react';
 import HouseProperties from "../commons/HouseProperties"
+import { Link } from "react-router-dom";
 
 const useClasses = makeStyles({
     root: {
@@ -54,51 +55,13 @@ const BannerSection = ({ purpose, title1, title2, buttonText, linkName, imageUrl
                 <Grid item>
                     <Typography variant="h5" fontWeight="bold">{purpose}</Typography>
                     <Typography gutterBottom>{title1} <br /> {title2}</Typography>
-                    <Button variant="contained" href={linkName}>{buttonText}</Button>
+                    <Button variant="contained" href='/search-property'>{buttonText}</Button>
                 </Grid>
             </Grid>
         </Box>
     )
 }
 
-
-// const ImageSection = ({ }) => {
-//     const classes = useClasses();
-
-//     const [test, setTest] = useState([])
-
-//     const fetchUrl = '/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=8'
-
-//     useEffect(() => {
-//         async function fetchData() {
-//             const request = await apis(fetchUrl)
-//             setTest(request?.hits)
-//             return request;
-//         }
-//         fetchData()
-//     }, [fetchUrl])
-
-
-//     return (
-//         <Box className={classes.imageBox}>
-//             <Grid container spacing={3} className={classes.gridImage}>
-//                 {test.map((test) => (
-//                     <Grid item key={test.id}>
-//                         <Commons.HouseProperties
-//                             component="img"
-//                             alt="house images"
-//                             image={test.coverPhoto.url}
-//                         />
-//                         <Typography mt={2} fontWeight="bold" fontSize="18px">{test.title.length > 30 ? `${test.title.substring(0, 30)}...` : test.title}</Typography>
-//                         <Typography>{test.rooms} <FontAwesomeIcon icon={faBed} /> | {test.baths} <FontAwesomeIcon icon={faBath} /> | {millify(test.area)} sqft <FontAwesomeIcon icon={faThLarge} /> </Typography>
-//                         <Typography fontWeight='bold' mt={1}>INR {millify(test.price)}{test.rentFrequency && `/${test.rentFrequency}`}</Typography>
-
-//                     </Grid>
-//                 ))}
-//             </Grid>
-//         </Box>
-//     )
-// }
 
 const BannerSec = () => {
     const classes = useClasses();
